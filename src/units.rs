@@ -17,7 +17,6 @@ pub const fn get_width(width: CaseWidth) -> f64 {
     }
 }
 
-
 #[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]
 pub struct CaseDesign {
     pub material: CaseMaterial,
@@ -26,7 +25,6 @@ pub struct CaseDesign {
     pub width: CaseWidth,
     pub depth: NonZeroU16, // mm
     pub ears: bool,
-    pub front: bool,
 }
 
 impl Default for CaseDesign {
@@ -38,7 +36,6 @@ impl Default for CaseDesign {
             width: Default::default(),
             depth: NonZeroU16::new(300).unwrap(),
             ears: true,
-            front: false,
         }
     }
 }
@@ -47,7 +44,7 @@ impl Default for CaseDesign {
 pub enum CaseMaterial {
     #[default]
     SheetMetal,
-    Wood
+    Wood,
 }
 
 #[repr(u8)]

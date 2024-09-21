@@ -1,7 +1,7 @@
 #![feature(const_fn_floating_point_arithmetic)]
 
-mod units;
 mod generator;
+mod units;
 
 use leptos::*;
 use units::{CaseDesign, CaseMaterial};
@@ -33,11 +33,6 @@ pub fn CaseConfigurator(
             <div class="input">
                 <label for="ears">"Include ears?"</label>
                 <input type="checkbox" id="ears" value={value.get_untracked().ears}/>
-            </div>
-
-            <div class="input">
-                <label for="front">"Separate front plate?"</label>
-                <input type="checkbox" id="front" value={value.get_untracked().front}/>
             </div>
 
             <div class="input">
@@ -83,13 +78,16 @@ pub fn main() {
                         initial_value=CaseDesign::default()
                     />
                     <h2>Output</h2>
-                    <div class="container">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="ge-export-svg-dark" filter="invert(100%) hue-rotate(180deg)" viewBox="-0.5 -0.5 762 402"><defs/><path fill="none" stroke="#000" stroke-dasharray="3 3" stroke-miterlimit="10" d="M360 340V60M600 340V60M360 60h240M360 340h240M320 340V60M640 340V60" pointer-events="stroke"/><path fill="none" stroke="#000" stroke-miterlimit="10" d="M600 60h40M360 60h-40M360 340h-40M640 340h-40M660 340V60M640 60h20M640 340h20M300 340V60M320 60h-20M320 340h-20M360 0h240" pointer-events="stroke"/><path fill="none" stroke="#000" stroke-dasharray="3 3" stroke-miterlimit="10" d="M360 20h240M360 380h240" pointer-events="stroke"/><path fill="none" stroke="#000" stroke-miterlimit="10" d="M360 400h240M600 20v40M600 0v20M360 0v20M360 20v40M600 340v40M600 380v20M360 340v40M360 380v20M720 280v-60M760 280v-60M720 220h40M720 280h40M720 200v-60M760 200v-60M720 140h40M720 200h40M0 340V60M0 60h240M240 340V60M0 340h240" pointer-events="stroke"/><path fill="none" stroke="#000" stroke-dasharray="3 3" stroke-miterlimit="10" d="M720 180h40M720 260h40" pointer-events="stroke"/></svg>
+                    <div class="container" 
+                    inner_html={generator::generate(&CaseDesign::default()).to_string()}
+                    >
+                    //{generator::generate(&CaseDesign::default()).to_string()}
                     </div>
                 </div>
                 <div class="vertical">
                     <h2>Render</h2>
                     <div class="container full">
+                        <span>tbd</span>
                         <canvas class="full"></canvas>
                     </div>
                 </div>
