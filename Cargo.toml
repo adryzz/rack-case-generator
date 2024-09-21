@@ -1,0 +1,16 @@
+[package]
+name = "rack-case-generator"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+console_error_panic_hook = "0.1.7"
+leptos = { version = "0.6.15", features = ["csr"] }
+svg = "0.17.0"
+web-sys = { version = "0.3.70", features = ["Window", "Document", "HtmlElement", "Text"] }
+console_log = "1"
+log = "0.4"
+
+[dev-dependencies]
+wasm-bindgen = "0.2"
+wasm-bindgen-test = "0.3.0"

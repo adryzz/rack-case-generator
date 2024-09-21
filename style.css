@@ -1,0 +1,37 @@
+html {
+    color:#e7e6e3;
+    background-color:#181a1b
+  }
+  a {
+    color:#ff66ba
+  }
+  .like-a {
+    color:#ff66ba;
+    text-decoration:underline
+  }
+  a[href^=""]:link,
+  a[href^="./"]:link,
+  a[href^="../"]:link,
+  a:active {
+    color:#7534d5;
+  }
+  a.active,
+  footer {
+    padding-top:5px
+  }
+  .page_header {
+    border-bottom:1px dotted #ff66ba;
+    padding-bottom:4px
+  }
+  .configurator {
+    border:2px solid #ff66ba;
+    padding:4px;
+    max-width: 50%;
+  }
+  input {
+    max-width: 50px;
+  }
+  label + * {
+    margin-left: 8px;
+  }
+  
