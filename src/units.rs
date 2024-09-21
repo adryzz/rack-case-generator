@@ -26,6 +26,7 @@ pub struct CaseDesign {
     pub width: CaseWidth,
     pub depth: NonZeroU16, // mm
     pub ears: bool,
+    pub front: bool,
 }
 
 impl Default for CaseDesign {
@@ -36,7 +37,8 @@ impl Default for CaseDesign {
             height: Default::default(),
             width: Default::default(),
             depth: NonZeroU16::new(300).unwrap(),
-            ears: true
+            ears: true,
+            front: false,
         }
     }
 }

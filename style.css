@@ -19,19 +19,47 @@ html {
   footer {
     padding-top:5px
   }
+  h1 {
+    text-align: center;
+  }
   .page_header {
     border-bottom:1px dotted #ff66ba;
     padding-bottom:4px
   }
-  .configurator {
+  .container {
     border:2px solid #ff66ba;
     padding:4px;
-    max-width: 50%;
   }
   input {
     max-width: 50px;
+    margin: 8px;
   }
   label + * {
     margin-left: 8px;
   }
-  
+  .full {
+    max-width: unset;
+    min-width: 100%;
+  }
+  .horizontal {
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    flex-grow: 1;
+    height: 100%;
+    margin: 8px;
+  }
+  .vertical {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    flex-grow: 1;
+    height: fit-content;
+    margin: 8px;
+  }
+  .limited {
+    max-width: 40%;
+  }
+  h2 {
+    max-width: fit-content;
+  }
